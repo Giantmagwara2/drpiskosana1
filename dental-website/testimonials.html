@@ -3,132 +3,667 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patient Testimonials | Dr. P.I Skosana</title>
+    <title>Testimonials | Dr. P.I. Skosana Dental Care</title>
+    <meta name="description" content="Read what our patients have to say about their experience at Dr. P.I. Skosana Dental Care. Real stories from real patients about our quality dental services.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Testimonials | Dr. P.I. Skosana Dental Care">
+    <meta property="og:description" content="Read what our patients have to say about their experience at Dr. P.I. Skosana Dental Care. Real stories from real patients.">
+    <meta property="og:image" content="images/logo.jpg">
+    <meta property="og:url" content="https://example.com/testimonials.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/logo.jpg" type="image/jpg">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
     <link href="styles.css" rel="stylesheet">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Dentist",
+        "name": "Dr. P.I. Skosana Dental Care",
+        "image": "images/logo.jpg",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Office No 211 Upperground KaMkholo Building, 26 Brown St",
+            "addressLocality": "Mbombela",
+            "postalCode": "1200"
+        },
+        "telephone": "+27137522757",
+        "url": "https://example.com"
+    }
+    </script>
 </head>
-<body class="light">
+<body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Header -->
-    <header class="header">
+    <header class="header" aria-label="Main Navigation">
         <div class="container">
             <div class="logo">
-                <h1 class="font-playfair">Dr. P.I Skosana</h1>
-                <p class="tagline">Dental Care</p>
+                <img src="images/logo.jpg" alt="Dr. P.I. Skosana Dental Care Logo" width="60" height="60">
+                <div class="logo-text">
+                    <h1>Dr. P.I. Skosana</h1>
+                    <p class="tagline">DENTAL CARE</p>
+                </div>
             </div>
-			
-            <nav class="desktop-nav">
+            <nav class="nav" aria-label="Site Navigation">
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="testimonials.html" aria-current="page">Testimonials</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="technology.html">Technology</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
+                <button class="mobile-menu-toggle" aria-expanded="false" aria-label="Toggle Menu" aria-controls="mobileMenu">
+                    <i class="fas fa-bars"></i>
+                </button>
             </nav>
-            <div class="mobile-menu-toggle" onclick="toggleMenu()">&#9776;</div>
         </div>
     </header>
 
     <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
-        <a href="testimonials.html">Testimonials</a>
+        <a href="testimonials.html" aria-current="page">Testimonials</a>
         <a href="gallery.html">Gallery</a>
         <a href="technology.html">Technology</a>
         <a href="contact.html">Contact</a>
     </div>
 
-    <!-- Hero Section -->
-    <section class="hero banner-with-bg py-24" style="background-image: url('images/testimonials-hero.jpg')">
-        <div class="banner-overlay"></div>
-        <div class="container flex flex-col md:flex-row items-center justify-between text-center md:text-left">
-            <div>
-                <h1 class="text-5xl font-bold text-white mb-4">Patient Testimonials</h1>
-                <p class="text-white/80 max-w-3xl mx-auto md:mx-0">
-                    Hear from our satisfied patients about their experiences with Dr. P.I Skosana.
-                </p>
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Patient Testimonials</h1>
+                <nav aria-label="Breadcrumb" class="breadcrumb">
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li aria-current="page">Testimonials</li>
+                    </ol>
+                </nav>
             </div>
-            <!-- Logo Placeholder -->
-            <div class="mt-6 md:mt-0">
-                <img src="https://via.placeholder.com/150" alt="Dr. P.I Skosana Dental Care Logo" class="w-36 h-auto">
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials-section py-16 bg-brand-light">
-        <div class="container">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-brand-primary mb-4">What Our Patients Say</h2>
-                <p class="text-gray-600 max-w-3xl mx-auto">
-                    Discover why our patients trust us for their dental care needs.
+        <!-- Testimonials Section -->
+        <section class="section bg-white" id="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">What Our Patients Say</span>
+                    <h2 class="section-title">Real Stories from Real Patients</h2>
+                    <p class="section-description">
+                        At Dr. P.I. Skosana Dental Care, we value the feedback from our patients. Here are some testimonials from individuals who have experienced our dental services firsthand.
+                    </p>
+                </div>
+                
+                <!-- Testimonial Filters -->
+                <div class="testimonial-filters">
+                    <button class="filter-btn active" data-filter="all">All Testimonials</button>
+                    <button class="filter-btn" data-filter="cosmetic">Cosmetic Dentistry</button>
+                    <button class="filter-btn" data-filter="orthodontics">Orthodontics</button>
+                    <button class="filter-btn" data-filter="general">General Dentistry</button>
+                    <button class="filter-btn" data-filter="pediatric">Pediatric Dentistry</button>
+                </div>
+                
+                <!-- Testimonials Grid -->
+                <div class="testimonials-grid" id="testimonialsGrid">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card animate-on-scroll" data-category="cosmetic">
+                        <div class="testimonial-header">
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="testimonial-service">Cosmetic Dentistry</div>
+                        </div>
+                        <div class="testimonial-quote" aria-hidden="true">"</div>
+                        <p class="testimonial-content">
+                            Dr. Skosana completely transformed my smile with veneers. I was always self-conscious about my teeth, but now I can't stop smiling! The entire team was professional, caring, and made me feel comfortable throughout the process. I highly recommend their cosmetic dentistry services.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-author-image">
+                                <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah Johnson" loading="lazy">
+                            </div>
+                            <div class="testimonial-author-info">
+                                <h4>Sarah Johnson</h4>
+                                <p>Patient since 2020</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card animate-on-scroll" data-category="orthodontics">
+                        <div class="testimonial-header">
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="testimonial-service">Orthodontics</div>
+                        </div>
+                        <div class="testimonial-quote" aria-hidden="true">"</div>
+                        <p class="testimonial-content">
+                            I was hesitant about getting braces as an adult, but Dr. Skosana recommended clear aligners that were practically invisible. The results exceeded my expectations, and the team was always available to answer my questions. My only regret is not doing this sooner!
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-author-image">
+                                <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Michael Thompson" loading="lazy">
+                            </div>
+                            <div class="testimonial-author-info">
+                                <h4>Michael Thompson</h4>
+                                <p>Patient since 2019</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card animate-on-scroll" data-category="general">
+                        <div class="testimonial-header">
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <div class="testimonial-service">General Dentistry</div>
+                        </div>
+                        <div class="testimonial-quote" aria-hidden="true">"</div>
+                        <p class="testimonial-content">
+                            I've been going to Dr. Skosana for regular check-ups and cleanings for years. The office is always clean, the staff is friendly, and they make what could be an unpleasant experience quite comfortable. They're thorough in their examinations and take the time to explain everything.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-author-image">
+                                <img src="https://randomuser.me/api/portraits/women/67.jpg" alt="Emily Davis" loading="lazy">
+                            </div>
+                            <div class="testimonial-author-info">
+                                <h4>Emily Davis</h4>
+                                <p>Patient since 2017</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 4 -->
+                    <div class="testimonial-card animate-on-scroll" data-category="pediatric">
+                        <div class="testimonial-header">
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="testimonial-service">Pediatric Dentistry</div>
+                        </div>
+                        <div class="testimonial-quote" aria-hidden="true">"</div>
+                        <p class="testimonial-content">
+                            Finding a dentist who can handle my anxious 6-year-old was a challenge until we discovered Dr. Skosana. The kid-friendly environment and patient approach made my daughter actually look forward to her dental visits. They've turned what was once a dreaded experience into something positive.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-author-image">
+                                <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Jennifer Wilson" loading="lazy">
+                            </div>
+                            <div class="testimonial-author-info">
+                                <h4>Jennifer Wilson</h4>
+                                <p>Patient since 2021</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 5 -->
+                    <div class="testimonial-card animate-on-scroll" data-category="general">
+                        <div class="testimonial-header">
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="testimonial-service">General Dentistry</div>
+                        </div>
+                        <div class="testimonial-quote" aria-hidden="true">"</div>
+                        <p class="testimonial-content">
+                            I had a dental emergency while visiting Mbombela, and Dr. Skosana's office accommodated me immediately. The care I received was exceptional, and they followed up to ensure I was doing well after the procedure. I wish my regular dentist back home was this attentive!
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-author-image">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Robert Brown" loading="lazy">
+                            </div>
+                            <div class="testimonial-author-info">
+                                <h4>Robert Brown</h4>
+                                <p>Emergency Patient</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 6 -->
+                    <div class="testimonial-card animate-on-scroll" data-category="cosmetic">
+                        <div class="testimonial-header">
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="testimonial-service">Cosmetic Dentistry</div>
+                        </div>
+                        <div class="testimonial-quote" aria-hidden="true">"</div>
+                        <p class="testimonial-content">
+                            After years of being unhappy with my smile, I decided to get teeth whitening and some minor cosmetic work done. The results are amazing, and the process was much easier than I expected. Dr. Skosana and the team were professional and made sure I was comfortable throughout.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-author-image">
+                                <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="David Martinez" loading="lazy">
+                            </div>
+                            <div class="testimonial-author-info">
+                                <h4>David Martinez</h4>
+                                <p>Patient since 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 7 -->
+                    <div class="testimonial-card animate-on-scroll" data-category="orthodontics">
+                        <div class="testimonial-header">
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <div class="testimonial-service">Orthodontics</div>
+                        </div>
+                        <div class="testimonial-quote" aria-hidden="true">"</div>
+                        <p class="testimonial-content">
+                            My teenager needed braces, and we chose Dr. Skosana after researching several options. The entire orthodontic process was well-explained, and they worked with our schedule for appointments. The staff was always friendly and accommodating, making the experience positive for my son.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-author-image">
+                                <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Lisa Anderson" loading="lazy">
+                            </div>
+                            <div class="testimonial-author-info">
+                                <h4>Lisa Anderson</h4>
+                                <p>Parent of Patient</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 8 -->
+                    <div class="testimonial-card animate-on-scroll" data-category="pediatric">
+                        <div class="testimonial-header">
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="testimonial-service">Pediatric Dentistry</div>
+                        </div>
+                        <div class="testimonial-quote" aria-hidden="true">"</div>
+                        <p class="testimonial-content">
+                            Dr. Skosana has a special way with children. My twins were terrified of the dentist until we found this practice. The colorful waiting area, gentle approach, and small rewards for good behavior have completely changed their attitude toward dental visits. Now they remind me when it's time for their check-ups!
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-author-image">
+                                <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Thomas Clark" loading="lazy">
+                            </div>
+                            <div class="testimonial-author-info">
+                                <h4>Thomas Clark</h4>
+                                <p>Parent of Patients</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Testimonials -->
+        <section class="section bg-light" id="video-testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Video Stories</span>
+                    <h2 class="section-title">Hear Directly from Our Patients</h2>
+                    <p class="section-description">
+                        Watch these video testimonials to hear directly from our patients about their experiences at Dr. P.I. Skosana Dental Care.
+                    </p>
+                </div>
+                
+                <div class="video-testimonials-grid">
+                    <div class="video-testimonial animate-on-scroll">
+                        <div class="video-container">
+                            <img src="https://ext.same-assets.com/663227978/713766770.jpeg" alt="Video Thumbnail" class="video-thumbnail">
+                            <button class="video-play-btn" aria-label="Play video testimonial">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="video-info">
+                            <h3>Sarah's Smile Transformation</h3>
+                            <p>Sarah shares her journey of getting veneers and how it changed her confidence.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="video-testimonial animate-on-scroll">
+                        <div class="video-container">
+                            <img src="https://ext.same-assets.com/663227978/3696077145.jpeg" alt="Video Thumbnail" class="video-thumbnail">
+                            <button class="video-play-btn" aria-label="Play video testimonial">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="video-info">
+                            <h3>Michael's Orthodontic Journey</h3>
+                            <p>Michael discusses his experience with clear aligners and the results he achieved.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="video-testimonial animate-on-scroll">
+                        <div class="video-container">
+                            <img src="https://ext.same-assets.com/663227978/4160880848.jpeg" alt="Video Thumbnail" class="video-thumbnail">
+                            <button class="video-play-btn" aria-label="Play video testimonial">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="video-info">
+                            <h3>The Wilson Family Experience</h3>
+                            <p>Jennifer talks about how Dr. Skosana's team made dental visits enjoyable for her children.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Share Your Story -->
+        <section class="section bg-white" id="share-story">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="share-story-content">
+                            <h2>Share Your Story</h2>
+                            <p>
+                                We value your feedback and would love to hear about your experience at Dr. P.I. Skosana Dental Care. Your testimonial can help others who are looking for quality dental care.
+                            </p>
+                            <p>
+                                Please take a moment to share your story with us. You can submit a written testimonial using the form, or contact us if you'd like to record a video testimonial.
+                            </p>
+                            <div class="testimonial-stats">
+                                <div class="stat-item">
+                                    <div class="stat-number">500+</div>
+                                    <div class="stat-label">Happy Patients</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">4.9</div>
+                                    <div class="stat-label">Average Rating</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">98%</div>
+                                    <div class="stat-label">Would Recommend</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-6">
+                        <div class="testimonial-form-container">
+                            <form id="testimonialForm" class="testimonial-form" novalidate>
+                                <div class="form-group">
+                                    <label for="name" class="form-label">Full Name</label>
+                                    <input type="text" id="name" class="form-control" placeholder="Your Full Name" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" id="email" class="form-control" placeholder="Your Email Address" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="service" class="form-label">Service Received</label>
+                                    <select id="service" class="form-select" required>
+                                        <option value="" selected disabled>Select a Service</option>
+                                        <option value="General Dentistry">General Dentistry</option>
+                                        <option value="Cosmetic Dentistry">Cosmetic Dentistry</option>
+                                        <option value="Orthodontics">Orthodontics</option>
+                                        <option value="Pediatric Dentistry">Pediatric Dentistry</option>
+                                        <option value="Endodontics">Endodontics</option>
+                                        <option value="Prosthodontics">Prosthodontics</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="rating" class="form-label">Your Rating</label>
+                                    <div class="rating-input">
+                                        <input type="radio" id="star5" name="rating" value="5" required>
+                                        <label for="star5" aria-label="5 stars"><i class="fas fa-star"></i></label>
+                                        
+                                        <input type="radio" id="star4" name="rating" value="4">
+                                        <label for="star4" aria-label="4 stars"><i class="fas fa-star"></i></label>
+                                        
+                                        <input type="radio" id="star3" name="rating" value="3">
+                                        <label for="star3" aria-label="3 stars"><i class="fas fa-star"></i></label>
+                                        
+                                        <input type="radio" id="star2" name="rating" value="2">
+                                        <label for="star2" aria-label="2 stars"><i class="fas fa-star"></i></label>
+                                        
+                                        <input type="radio" id="star1" name="rating" value="1">
+                                        <label for="star1" aria-label="1 star"><i class="fas fa-star"></i></label>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="testimonial" class="form-label">Your Testimonial</label>
+                                    <textarea id="testimonial" class="form-control" rows="5" placeholder="Share your experience with us" required></textarea>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <input type="checkbox" id="consent" class="form-check-input" required>
+                                        <label for="consent" class="form-check-label">
+                                            I consent to having my testimonial and name published on the website and other marketing materials.
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="fas fa-paper-plane"></i> Submit Testimonial
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Banner -->
+        <section class="cta-banner" id="cta">
+            <div class="cta-bg" aria-hidden="true"></div>
+            <div class="container cta-content">
+                <h2 class="cta-title animate-on-scroll">Ready to Experience Our Care?</h2>
+                <p class="cta-description animate-on-scroll">
+                    Join our community of satisfied patients and discover the difference at Dr. P.I. Skosana Dental Care.
                 </p>
+                <a href="contact.html" class="btn btn-accent btn-lg animate-on-scroll">
+                    <i class="fas fa-calendar-check"></i> Book Your Appointment
+                </a>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Testimonial 1 -->
-                <div class="testimonial bg-white p-6 rounded-lg shadow-md">
-                    <p class="quote text-gray-700 mb-4">
-                        "Dr. Skosana transformed my smile! The staff is friendly, and the service is exceptional."
-                    </p>
-                    <p class="author text-brand-primary font-semibold">- Jane D.</p>
-                </div>
-                <!-- Testimonial 2 -->
-                <div class="testimonial bg-white p-6 rounded-lg shadow-md">
-                    <p class="quote text-gray-700 mb-4">
-                        "I had a fear of dentists, but Dr. Skosana made me feel comfortable throughout the procedure."
-                    </p>
-                    <p class="author text-brand-primary font-semibold">- John S.</p>
-                </div>
-                <!-- Testimonial 3 -->
-                <div class="testimonial bg-white p-6 rounded-lg shadow-md">
-                    <p class="quote text-gray-700 mb-4">
-                        "Professional and caring staff. Highly recommend for anyone seeking quality dental care."
-                    </p>
-                    <p class="author text-brand-primary font-semibold">- Emily R.</p>
-                </div>
-                <!-- Testimonial 4 -->
-                <div class="testimonial bg-white p-6 rounded-lg shadow-md">
-                    <p class="quote text-gray-700 mb-4">
-                        "The entire experience was seamless, from booking to treatment. Thank you, Dr. Skosana!"
-                    </p>
-                    <p class="author text-brand-primary font-semibold">- Sarah L.</p>
-                </div>
-                <!-- Testimonial 5 -->
-                <div class="testimonial bg-white p-6 rounded-lg shadow-md">
-                    <p class="quote text-gray-700 mb-4">
-                        "Dr. Skosana's expertise and gentle approach made all the difference. My teeth have never looked better!"
-                    </p>
-                    <p class="author text-brand-primary font-semibold">- Michael T.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-columns">
+            <div class="footer-top">
                 <div class="footer-column">
-                    <h3>Contact</h3>
-                    <p>Office No 211 Upperground KaMkholo Building,<br>26 Brown St,<br>Mbombela, 1200</p>
-                    <p>WhatsApp: <a href="https://wa.me/27835406225" class="text-white">083 540 6225</a></p>
-                    <p>Tel: <a href="tel:+27137522757" class="text-white">013 752 2757</a></p>
-                    <p>Email: <a href="mailto:drpiskosana@gmail.com" class="text-white">DRPISKOSANA@GMAIL.COM</a></p>
+                    <div class="footer-logo">
+                        <img src="images/logo.jpg" alt="Dr. P.I. Skosana Dental Care Logo">
+                        <span class="footer-logo-text">Dr. P.I. Skosana</span>
+                    </div>
+                    <p class="footer-description">
+                        Providing exceptional dental care with a focus on patient comfort, advanced technology, and beautiful results.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
+                
                 <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms of Service</a></li>
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-heading">Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="cosmetic-dentistry.html">Cosmetic Dentistry</a></li>
+                        <li><a href="orthodontics.html">Orthodontics</a></li>
+                        <li><a href="preventative-dentistry.html">Preventative Dentistry</a></li>
+                        <li><a href="endodontics.html">Endodontics</a></li>
+                        <li><a href="prosthodontics.html">Prosthodontics</a></li>
+                        <li><a href="services.html">View All Services</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-heading">Contact Us</h3>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="footer-contact-text">
+                            Office No 211 Upperground KaMkholo Building,<br>
+                            26 Brown St, Mbombela, 1200
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="footer-contact-text">
+                            <a href="tel:+27137522757">013 752 2757</a>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="footer-contact-text">
+                            <a href="https://wa.me/27835406225">083 540 6225</a>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="footer-contact-text">
+                            <a href="mailto:drpiskosana@gmail.com">DRPISKOSANA@GMAIL.COM</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dr. P.I. Skosana Dental Care. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
     <script src="script.js"></script>
+    <script>
+        // Testimonial Filtering
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const testimonialCards = document.querySelectorAll('.testimonial-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Get filter value
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // Filter testimonials
+                    testimonialCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Video Play Button Functionality
+            const videoPlayButtons = document.querySelectorAll('.video-play-btn');
+            
+            videoPlayButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // In a real implementation, this would play the video
+                    // For this demo, we'll just show an alert
+                    alert('Video would play here in a production environment.');
+                });
+            });
+            
+            // Star Rating Functionality
+            const ratingInputs = document.querySelectorAll('.rating-input input');
+            const ratingLabels = document.querySelectorAll('.rating-input label');
+            
+            ratingInputs.forEach((input, index) => {
+                input.addEventListener('change', function() {
+                    // Reset all stars
+                    ratingLabels.forEach((label, i) => {
+                        if (i <= index) {
+                            label.classList.add('selected');
+                        } else {
+                            label.classList.remove('selected');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>

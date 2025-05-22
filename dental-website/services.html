@@ -3,20 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. P.I Skosana Dental Care</title>
-    <meta name="description" content="Experience exceptional dental care with Dr. P.I Skosana. From cosmetic dentistry to advanced treatments, we prioritize your smile.">
+    <title>Our Services | Dr. P.I. Skosana Dental Care</title>
+    <meta name="description" content="Explore the comprehensive dental services offered by Dr. P.I. Skosana Dental Care, including cosmetic dentistry, orthodontics, preventative care, and more.">
+    
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Dr. P.I Skosana Dental Care">
-    <meta property="og:description" content="Experience exceptional dental care with Dr. P.I Skosana. From cosmetic dentistry to advanced treatments, we prioritize your smile.">
-    <meta property="og:image" content="https://example.com/images/hero-image.jpg">
-    <meta property="og:url" content="https://example.com">
+    <meta property="og:title" content="Our Services | Dr. P.I. Skosana Dental Care">
+    <meta property="og:description" content="Comprehensive dental services including cosmetic dentistry, orthodontics, preventative care, and more.">
+    <meta property="og:image" content="images/logo.jpg">
+    <meta property="og:url" content="https://example.com/services.html">
     <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/logo.jpg" type="image/jpg">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+    
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Dentist",
-        "name": "Dr. P.I Skosana Dental Care",
+        "name": "Dr. P.I. Skosana Dental Care",
+        "image": "images/logo.jpg",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "Office No 211 Upperground KaMkholo Building, 26 Brown St",
@@ -27,29 +42,35 @@
         "url": "https://example.com"
     }
     </script>
-    <link href="styles.css" rel="stylesheet">
 </head>
-<body class="light">
+<body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Header -->
     <header class="header" aria-label="Main Navigation">
         <div class="container">
             <div class="logo">
-                <img src="images/logo.jpg" alt="Dr. P.I Skosana Logo" width="40" height="40" loading="lazy">
-                <h1 class="font-playfair">Dr. P.I Skosana</h1>
-                <p class="tagline">Dental Care</p>
+                <img src="images/logo.jpg" alt="Dr. P.I. Skosana Dental Care Logo" width="60" height="60">
+                <div class="logo-text">
+                    <h1>Dr. P.I. Skosana</h1>
+                    <p class="tagline">DENTAL CARE</p>
+                </div>
             </div>
-            <nav class="desktop-nav" aria-label="Site Navigation">
+            <nav class="nav" aria-label="Site Navigation">
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
+                    <li><a href="services.html" aria-current="page">Services</a></li>
                     <li><a href="testimonials.html">Testimonials</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="technology.html">Technology</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
+                <button class="mobile-menu-toggle" aria-expanded="false" aria-label="Toggle Menu" aria-controls="mobileMenu">
+                    <i class="fas fa-bars"></i>
+                </button>
             </nav>
-            <button class="mobile-menu-toggle" onclick="toggleMenu()" role="button" aria-expanded="false" aria-label="Toggle Menu">&#9776;</button>
         </div>
     </header>
 
@@ -57,98 +78,597 @@
     <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="services.html">Services</a>
+        <a href="services.html" aria-current="page">Services</a>
         <a href="testimonials.html">Testimonials</a>
         <a href="gallery.html">Gallery</a>
         <a href="technology.html">Technology</a>
         <a href="contact.html">Contact</a>
     </div>
 
-    <!-- Hero Section -->
-    <section class="hero banner-with-bg py-24" style="background-image: url('https://via.placeholder.com/1920x500');">
-        <div class="banner-overlay"></div>
-        <div class="container flex flex-col md:flex-row items-center justify-between text-center md:text-left">
-            <div>
-                <h1 class="text-5xl font-bold text-white mb-4">Our Services</h1>
-                <p class="text-white/80 max-w-3xl mx-auto">
-                    Comprehensive dental care tailored to your needs.
-                </p>
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Our Services</h1>
+                <nav aria-label="Breadcrumb" class="breadcrumb">
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li aria-current="page">Services</li>
+                    </ol>
+                </nav>
             </div>
-            <!-- Logo Placeholder -->
-            <div class="mt-6 md:mt-0">
-                <img src="https://via.placeholder.com/150" alt="Dr. P.I Skosana Dental Care Logo" class="w-36 h-auto">
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Services Section -->
-    <section class="py-16 bg-white">
-        <div class="container">
-            <div class="text-center mb-12">
-                <div class="uppercase text-sm tracking-wider font-montserrat text-brand-primary mb-2">Services</div>
-                <h2 class="text-3xl font-bold text-brand-primary mb-4">
-                    WHAT Dental Care CAN DO FOR YOU
-                </h2>
-                <p class="text-gray-600 max-w-3xl mx-auto font-montserrat">
-                    Using the most advanced digital technology and equipment, Dental Care aims to give service worth smiling about.
-                </p>
-            </div>
-            <!-- Grid of Services -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                <!-- Endodontics -->
-                <a href="endodontics.html" aria-label="Learn More About Endodontics">
-                    <div class="service-card rounded-lg overflow-hidden shadow-md">
-                        <div class="relative h-56">
-                            <img
-                                src="https://ext.same-assets.com/663227978/1088353602.jpeg"
-                                alt="Endodontics"
-                                class="w-full h-full object-cover"
-                                loading="lazy"
-                            />
-                            <div class="service-title">Endodontics</div>
+        <!-- Services Overview -->
+        <section class="section bg-white" id="services-overview">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">What We Offer</span>
+                    <h2 class="section-title">Comprehensive Dental Care</h2>
+                    <p class="section-description">
+                        At Dr. P.I. Skosana Dental Care, we provide a wide range of dental services to meet all your oral health needs. Our team of experienced professionals uses the latest technology and techniques to ensure you receive the highest quality care in a comfortable environment.
+                    </p>
+                </div>
+                
+                <!-- Service Categories -->
+                <div class="service-categories">
+                    <div class="service-category-tabs">
+                        <button class="service-tab active" data-target="all">All Services</button>
+                        <button class="service-tab" data-target="preventative">Preventative</button>
+                        <button class="service-tab" data-target="restorative">Restorative</button>
+                        <button class="service-tab" data-target="cosmetic">Cosmetic</button>
+                        <button class="service-tab" data-target="specialized">Specialized</button>
+                    </div>
+                    
+                    <!-- Services Grid -->
+                    <div class="services-grid" id="servicesGrid">
+                        <!-- Endodontics -->
+                        <div class="service-card animate-on-scroll" data-category="restorative specialized">
+                            <div class="service-card-image">
+                                <img src="https://ext.same-assets.com/663227978/1088353602.jpeg" alt="Endodontics" loading="lazy">
+                                <div class="service-card-overlay" aria-hidden="true"></div>
+                            </div>
+                            <div class="service-card-content">
+                                <h3 class="service-card-title">Endodontics</h3>
+                                <p class="service-card-description">
+                                    Root canal treatment to save teeth with damaged or infected pulp, relieving pain and preserving your natural smile.
+                                </p>
+                                <a href="endodontics.html" class="service-card-link">
+                                    Learn More <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Prosthodontics -->
+                        <div class="service-card animate-on-scroll" data-category="restorative cosmetic">
+                            <div class="service-card-image">
+                                <img src="https://ext.same-assets.com/663227978/3110383078.jpeg" alt="Prosthodontics" loading="lazy">
+                                <div class="service-card-overlay" aria-hidden="true"></div>
+                            </div>
+                            <div class="service-card-content">
+                                <h3 class="service-card-title">Prosthodontics</h3>
+                                <p class="service-card-description">
+                                    Restore and replace missing teeth with custom-designed prosthetics for improved function and aesthetics.
+                                </p>
+                                <a href="prosthodontics.html" class="service-card-link">
+                                    Learn More <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Paediatric Dentistry -->
+                        <div class="service-card animate-on-scroll" data-category="preventative specialized">
+                            <div class="service-card-image">
+                                <img src="https://ext.same-assets.com/663227978/4160880848.jpeg" alt="Paediatric Dentistry" loading="lazy">
+                                <div class="service-card-overlay" aria-hidden="true"></div>
+                            </div>
+                            <div class="service-card-content">
+                                <h3 class="service-card-title">Paediatric Dentistry</h3>
+                                <p class="service-card-description">
+                                    Specialized dental care for children in a friendly environment, focusing on prevention and positive experiences.
+                                </p>
+                                <a href="paediatric-dentistry.html" class="service-card-link">
+                                    Learn More <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Cosmetic Dentistry -->
+                        <div class="service-card animate-on-scroll" data-category="cosmetic">
+                            <div class="service-card-image">
+                                <img src="https://ext.same-assets.com/663227978/713766770.jpeg" alt="Cosmetic Dentistry" loading="lazy">
+                                <div class="service-card-overlay" aria-hidden="true"></div>
+                            </div>
+                            <div class="service-card-content">
+                                <h3 class="service-card-title">Cosmetic Dentistry</h3>
+                                <p class="service-card-description">
+                                    Enhance your smile with whitening, veneers, and other aesthetic treatments for a confident, beautiful appearance.
+                                </p>
+                                <a href="cosmetic-dentistry.html" class="service-card-link">
+                                    Learn More <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Orthodontics -->
+                        <div class="service-card animate-on-scroll" data-category="cosmetic specialized">
+                            <div class="service-card-image">
+                                <img src="https://ext.same-assets.com/663227978/3696077145.jpeg" alt="Orthodontics" loading="lazy">
+                                <div class="service-card-overlay" aria-hidden="true"></div>
+                            </div>
+                            <div class="service-card-content">
+                                <h3 class="service-card-title">Orthodontics</h3>
+                                <p class="service-card-description">
+                                    Correct misaligned teeth and jaws with braces or clear aligners for improved oral health and appearance.
+                                </p>
+                                <a href="orthodontics.html" class="service-card-link">
+                                    Learn More <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Preventative Dentistry -->
+                        <div class="service-card animate-on-scroll" data-category="preventative">
+                            <div class="service-card-image">
+                                <img src="https://ext.same-assets.com/663227978/3783852295.jpeg" alt="Preventative Dentistry" loading="lazy">
+                                <div class="service-card-overlay" aria-hidden="true"></div>
+                            </div>
+                            <div class="service-card-content">
+                                <h3 class="service-card-title">Preventative Dentistry</h3>
+                                <p class="service-card-description">
+                                    Maintain optimal oral health with regular check-ups, cleanings, and personalized preventive care plans.
+                                </p>
+                                <a href="preventative-dentistry.html" class="service-card-link">
+                                    Learn More <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Periodontics -->
+                        <div class="service-card animate-on-scroll" data-category="specialized restorative">
+                            <div class="service-card-image">
+                                <img src="https://ext.same-assets.com/663227978/1088353602.jpeg" alt="Periodontics" loading="lazy">
+                                <div class="service-card-overlay" aria-hidden="true"></div>
+                            </div>
+                            <div class="service-card-content">
+                                <h3 class="service-card-title">Periodontics</h3>
+                                <p class="service-card-description">
+                                    Specialized treatment for gum disease and other conditions affecting the supporting structures of the teeth.
+                                </p>
+                                <a href="periodontics.html" class="service-card-link">
+                                    Learn More <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Oral Surgery -->
+                        <div class="service-card animate-on-scroll" data-category="specialized restorative">
+                            <div class="service-card-image">
+                                <img src="https://ext.same-assets.com/663227978/3110383078.jpeg" alt="Oral Surgery" loading="lazy">
+                                <div class="service-card-overlay" aria-hidden="true"></div>
+                            </div>
+                            <div class="service-card-content">
+                                <h3 class="service-card-title">Oral Surgery</h3>
+                                <p class="service-card-description">
+                                    Surgical procedures including extractions, implant placement, and treatment of oral pathologies.
+                                </p>
+                                <a href="oral-surgery.html" class="service-card-link">
+                                    Learn More <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Dental Restorations -->
+                        <div class="service-card animate-on-scroll" data-category="restorative">
+                            <div class="service-card-image">
+                                <img src="https://ext.same-assets.com/663227978/4160880848.jpeg" alt="Dental Restorations" loading="lazy">
+                                <div class="service-card-overlay" aria-hidden="true"></div>
+                            </div>
+                            <div class="service-card-content">
+                                <h3 class="service-card-title">Dental Restorations</h3>
+                                <p class="service-card-description">
+                                    Repair damaged teeth with fillings, crowns, bridges, and other restorative treatments to restore function and appearance.
+                                </p>
+                                <a href="dental-restorations.html" class="service-card-link">
+                                    Learn More <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </a>
-                <!-- Repeat for other services -->
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CTA Banner -->
-    <section class="cta-banner bg-brand-primary py-16">
-        <div class="container text-center">
-            <h2 class="text-3xl font-bold text-white mb-4">Ready to Transform Your Smile?</h2>
-            <p class="text-white/80 max-w-3xl mx-auto mb-8">
-                Contact us today to schedule your appointment and experience the highest standard of dental care.
-            </p>
-            <a href="contact.html">
-                <button class="btn-primary">Get in Touch</button>
-            </a>
-        </div>
-    </section>
+        <!-- Service Process -->
+        <section class="section bg-light" id="service-process">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Our Approach</span>
+                    <h2 class="section-title">What to Expect</h2>
+                    <p class="section-description">
+                        Our patient-centered approach ensures you receive personalized care tailored to your unique needs.
+                    </p>
+                </div>
+                
+                <div class="process-steps">
+                    <div class="process-step animate-on-scroll">
+                        <div class="process-step-number">1</div>
+                        <div class="process-step-content">
+                            <h3>Initial Consultation</h3>
+                            <p>
+                                Your journey begins with a comprehensive examination and discussion of your dental history, concerns, and goals.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step animate-on-scroll">
+                        <div class="process-step-number">2</div>
+                        <div class="process-step-content">
+                            <h3>Personalized Treatment Plan</h3>
+                            <p>
+                                Based on your examination, we develop a customized treatment plan addressing your specific needs and preferences.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step animate-on-scroll">
+                        <div class="process-step-number">3</div>
+                        <div class="process-step-content">
+                            <h3>Treatment Implementation</h3>
+                            <p>
+                                We provide the agreed-upon treatments using the latest techniques and technologies for optimal results.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step animate-on-scroll">
+                        <div class="process-step-number">4</div>
+                        <div class="process-step-content">
+                            <h3>Follow-Up Care</h3>
+                            <p>
+                                We schedule follow-up appointments to monitor your progress and ensure long-term success of your treatment.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Insurance & Payment -->
+        <section class="section bg-white" id="insurance-payment">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="insurance-info">
+                            <h2>Insurance & Payment Options</h2>
+                            <p>
+                                We strive to make quality dental care accessible and affordable for all our patients. We accept most major medical aid schemes and offer flexible payment options.
+                            </p>
+                            
+                            <h3>Accepted Medical Aid Schemes</h3>
+                            <ul class="insurance-list">
+                                <li>Discovery Health</li>
+                                <li>Bonitas</li>
+                                <li>Momentum Health</li>
+                                <li>Medihelp</li>
+                                <li>Fedhealth</li>
+                                <li>Bestmed</li>
+                                <li>And many more</li>
+                            </ul>
+                            
+                            <h3>Payment Options</h3>
+                            <p>
+                                We accept cash, credit cards, debit cards, and electronic transfers. We also offer flexible payment plans for extensive treatments.
+                            </p>
+                            
+                            <div class="payment-icons">
+                                <i class="fab fa-cc-visa"></i>
+                                <i class="fab fa-cc-mastercard"></i>
+                                <i class="fab fa-cc-amex"></i>
+                                <i class="fas fa-money-bill-wave"></i>
+                                <i class="fas fa-university"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-6">
+                        <div class="payment-form-container">
+                            <h2>Request Cost Estimate</h2>
+                            <p>
+                                Interested in a specific treatment? Fill out the form below to request a cost estimate.
+                            </p>
+                            
+                            <form id="estimateForm" class="estimate-form" novalidate>
+                                <div class="form-group">
+                                    <label for="name" class="form-label">Full Name</label>
+                                    <input type="text" id="name" class="form-control" placeholder="Your Full Name" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" id="email" class="form-control" placeholder="Your Email Address" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" id="phone" class="form-control" placeholder="Your Phone Number" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="service" class="form-label">Service of Interest</label>
+                                    <select id="service" class="form-select" required>
+                                        <option value="" selected disabled>Select a Service</option>
+                                        <option value="Cosmetic Dentistry">Cosmetic Dentistry</option>
+                                        <option value="Orthodontics">Orthodontics</option>
+                                        <option value="Endodontics">Endodontics</option>
+                                        <option value="Prosthodontics">Prosthodontics</option>
+                                        <option value="Paediatric Dentistry">Paediatric Dentistry</option>
+                                        <option value="Preventative Dentistry">Preventative Dentistry</option>
+                                        <option value="Periodontics">Periodontics</option>
+                                        <option value="Oral Surgery">Oral Surgery</option>
+                                        <option value="Dental Restorations">Dental Restorations</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="message" class="form-label">Additional Information</label>
+                                    <textarea id="message" class="form-control" rows="4" placeholder="Please provide any additional details about the service you're interested in"></textarea>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <input type="checkbox" id="consent" class="form-check-input" required>
+                                        <label for="consent" class="form-check-label">
+                                            I consent to having this website store my submitted information so they can respond to my inquiry.
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="fas fa-paper-plane"></i> Request Estimate
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section faq-section bg-light" id="faq">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">FAQ</span>
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-description">
+                        Find answers to common questions about our services.
+                    </p>
+                </div>
+                
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            How often should I visit the dentist?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                We recommend visiting the dentist for a check-up and cleaning every six months. However, some patients may need more frequent visits depending on their oral health needs. Dr. Skosana will recommend the appropriate schedule for you.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            What is the difference between cosmetic and restorative dentistry?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Restorative dentistry focuses on repairing damaged teeth and restoring their function, while cosmetic dentistry primarily aims to improve the appearance of your smile. Many procedures, such as dental crowns and implants, serve both purposes by restoring function and enhancing aesthetics.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            How long do dental implants last?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                With proper care and maintenance, dental implants can last a lifetime. The crown attached to the implant typically lasts 10-15 years before needing replacement due to normal wear and tear. Regular dental check-ups and good oral hygiene are essential for the longevity of your implants.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Is teeth whitening safe?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Professional teeth whitening performed by a dentist is safe for most patients. We use high-quality products and customize the treatment to your specific needs to minimize sensitivity and ensure optimal results. However, whitening may not be recommended for patients with certain dental conditions or extensive restorations.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            What age should children start seeing a dentist?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                Children should have their first dental visit by the age of one or within six months after their first tooth erupts. Early dental visits help establish good oral hygiene habits, monitor development, and prevent potential issues.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Banner -->
+        <section class="cta-banner" id="cta">
+            <div class="cta-bg" aria-hidden="true"></div>
+            <div class="container cta-content">
+                <h2 class="cta-title animate-on-scroll">Ready to Transform Your Smile?</h2>
+                <p class="cta-description animate-on-scroll">
+                    Schedule your appointment today and take the first step towards a healthier, more beautiful smile.
+                </p>
+                <a href="contact.html" class="btn btn-accent btn-lg animate-on-scroll">
+                    <i class="fas fa-calendar-check"></i> Book Your Appointment
+                </a>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-columns">
+            <div class="footer-top">
                 <div class="footer-column">
-                    <h3>Contact</h3>
-                    <p>Office No 211 Upperground KaMkholo Building,<br>26 Brown St,<br>Mbombela, 1200</p>
-                    <p>WhatsApp: <a href="https://wa.me/27835406225" class="text-white" aria-label="WhatsApp: 083 540 6225">083 540 6225</a></p>
-                    <p>Tel: <a href="tel:+27137522757" class="text-white" aria-label="Phone: 013 752 2757">013 752 2757</a></p>
-                    <p>Email: <a href="mailto:drpiskosana@gmail.com" class="text-white" aria-label="Email: DRPISKOSANA@GMAIL.COM">DRPISKOSANA@GMAIL.COM</a></p>
+                    <div class="footer-logo">
+                        <img src="images/logo.jpg" alt="Dr. P.I. Skosana Dental Care Logo">
+                        <span class="footer-logo-text">Dr. P.I. Skosana</span>
+                    </div>
+                    <p class="footer-description">
+                        Providing exceptional dental care with a focus on patient comfort, advanced technology, and beautiful results.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
+                
                 <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms of Service</a></li>
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-heading">Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="cosmetic-dentistry.html">Cosmetic Dentistry</a></li>
+                        <li><a href="orthodontics.html">Orthodontics</a></li>
+                        <li><a href="preventative-dentistry.html">Preventative Dentistry</a></li>
+                        <li><a href="endodontics.html">Endodontics</a></li>
+                        <li><a href="prosthodontics.html">Prosthodontics</a></li>
+                        <li><a href="services.html">View All Services</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-heading">Contact Us</h3>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="footer-contact-text">
+                            Office No 211 Upperground KaMkholo Building,<br>
+                            26 Brown St, Mbombela, 1200
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="footer-contact-text">
+                            <a href="tel:+27137522757">013 752 2757</a>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="footer-contact-text">
+                            <a href="https://wa.me/27835406225">083 540 6225</a>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="footer-contact-text">
+                            <a href="mailto:drpiskosana@gmail.com">DRPISKOSANA@GMAIL.COM</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dr. P.I. Skosana Dental Care. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
     <script src="script.js"></script>
+    <script>
+        // Service Category Filtering
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.service-tab');
+            const serviceCards = document.querySelectorAll('.service-card');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Remove active class from all tabs
+                    tabs.forEach(t => t.classList.remove('active'));
+                    
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+                    
+                    // Get target category
+                    const target = this.getAttribute('data-target');
+                    
+                    // Filter service cards
+                    serviceCards.forEach(card => {
+                        if (target === 'all' || card.getAttribute('data-category').includes(target)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // FAQ Accordion Functionality
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                    
+                    // Toggle current question
+                    this.setAttribute('aria-expanded', !isExpanded);
+                    answer.style.maxHeight = isExpanded ? null : answer.scrollHeight + 'px';
+                    
+                    // Toggle icon
+                    const icon = this.querySelector('i');
+                    icon.className = isExpanded ? 'fas fa-chevron-down' : 'fas fa-chevron-up';
+                });
+            });
+        });
+    </script>
 </body>
 </html>
